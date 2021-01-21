@@ -1,0 +1,111 @@
+QMainWindow,QDialog{
+    background:#6884A4;
+    color:white;
+}
+
+QWidget{
+    border:solid;
+    border-width:1px;
+    border-color:#43B0E8;
+}
+QPushButton{
+background:  #3091D6;
+                                          /*rgb最后一个参数是透明度 越高越不透明  0~255   #2E97D1  #3091D6*/
+    color: white;                         /*前景(文本)颜色*/
+    margin: 1px 1px 1px 1px;          /*外边距 顺序上右下左 */
+    padding: 4px;                         /*内边距  顺序上右下左  只写一个参数代表相等*/
+    border:solid ;                        /*边框---可以分开设置 solid 实线 dotted 点状边框   none无边框  dashed 虚线*/
+    border-width:0px;
+    border-color:#244478;		  /*边框颜色 上 右 下 左*/
+    border-radius:2px;                    /*边框圆角半径 */
+
+}
+QPushButton::hover,QToolButton::hover{
+   background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 #6CB4F7, stop: 0.5 #2E97D1,stop: 1.0 #6CB4F7);
+    border-color: #244478;
+    color:white
+}
+
+QPushButton::pressed,QToolButton::pressed{
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                 stop: 0 #91BCEB,
+                                 stop: 1.0 #76BDEB);
+
+}
+QTreeWidget{
+            background:#6884A4;
+            color:white;
+}
+QTabBar::tab {
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+      stop: 0 #D3DCEB,stop: 1.0 #76BDEB);
+}
+
+QTabBar::tab:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+    stop: 0 #5C89E8,  stop: 1.0 #A3B3E8);
+    color:white;
+}
+/*下拉框*/
+QComboBox {
+     border: 1px solid #32435E;
+     border-radius: 0px;
+     padding: 1px 18px 1px 3px;
+     color:white;
+
+ }
+QComboBox::hover{
+  border-color:#5D8B9E;
+}
+
+
+ QComboBox:editable {
+     background: #6AC2F0;
+ }
+
+ QComboBox:!editable, QComboBox::drop-down:editable {
+      background:#3091D6;
+ }
+
+ /* QComboBox gets the "on" state when the popup is open */
+ QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+     background: #6AC2F0;
+ }
+
+ QComboBox:on { /* shift the text when the popup opens */
+     padding-top: 3px;
+     padding-left: 4px;
+ }
+ /*下拉箭头区域样式*/
+ QComboBox::drop-down {
+         background-color:transparent;
+ }
+/*下拉图标*/
+ QComboBox::down-arrow {
+     image:url(:/qss(1)/xialak.jpg);
+ }
+
+ QComboBox::down-arrow:on { /* shift the arrow when popup is open */
+     top:  1px;
+     left: 1px;
+ }
+
+ QComboBox QAbstractItemView {
+     border: 2px solid #32435E;
+     selection-background-color:#3091D6;
+     background: white;
+ }
+QGroupBox{
+     background:white;
+     border:solid;
+     border-width:0px;
+     border-color:#43B0E8;
+
+}
+QLineEdit,QTextEdit {
+    border: 1px solid #32435E;
+    border-radius: 3px;
+    /* padding: 0 8px; */
+    background:  white;
+    selection-background-color: #0A246A;
+    }
